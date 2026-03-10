@@ -1,21 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <div class="logo">Empresa</div>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
+
     <main>
         <section class="hero-section">
-            <h1>Bienvenido a Nuestra Landing Page</h1> 
+            <h1>Bienvenido a Nuestra Landing Page</h1>
             <button>Conoce más</button>
             <img class="hero-image" src="img/hero-img.jpg" alt="hero image">
         </section>
-    </main>
-   <footer></footer>
+        <section class="services-section">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-container">
+                <article class="service-card">
+                    <img src="img/service1.jpg" alt="Servicio 1">
+                    <h3>Servicio 1</h3>
+                    <p>Descripción del servicio 1.</p>
+                </article>
+                <article class="service-card">
+                    <img src="img/service2.jpg" alt="Servicio 2">
+                    <h3>Servicio 2</h3>
+                    <p>Descripción del servicio 2.</p>
+                </article>
+                <article class="service-card">
+                    <img src="img/service3.jpg" alt="Servicio 3">
+                    <h3>Servicio 3</h3>
+                    <p>Descripción del servicio 3.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Banner de cookies -->
+        <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie banner">
+            <div class="cookie-content">
+                <p>
+                    Usamos cookies para mejorar tu experiencia y analizar tráfico.
+                    <a href="#privacidad" class="cookie-link">Ver detalles</a>
+                </p>
+                <div class="cookie-actions">
+                    <button class="cookie-btn cookie-btn--ghost" id="cookieReject">Rechazar</button>
+                    <button class="cookie-btn cookie-btn--primary" id="cookieAccept">Aceptar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3 class="logo">Empresa</h3>
+                    <p>Descripción de la empresa</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes sociales</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:info@empresa.com">info@empresa.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Empresa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
 </body>
+
 </html>

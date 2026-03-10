@@ -1,14 +1,22 @@
-*{
-    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total del elemento */
-    margin: 0;
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
-  --sage:  #AAB3AB;
-  --mist:  #C4CBB7;
+  --sage: #AAB3AB;
+  --mist: #C4CBB7;
   --cream: #EBEFC9;
-  --sand:  #EEE0B7;
+  --sand: #EEE0B7;
   --peach: #E8CAAF;
+  --orange: #F4A261;
+}
+
+header {
+  position: relative;
+  z-index: 10;
 }
 
 .hero-section {
@@ -18,7 +26,8 @@
 }
 
 .hero-image {
-  position: absolute; /* imagen ocupa todo el fondo */
+  position: absolute;
+  /* imagen ocupa todo el fondo */
   inset: 0;
   width: 100%;
   height: 100%;
@@ -28,8 +37,9 @@
 
 .hero-section h1 {
   position: relative;
-  z-index: 1; /* h1 queda encima de la imagen */
-  color: #333;        
+  z-index: 1;
+  /* h1 queda encima de la imagen */
+  color: #333;
   font-size: 2rem;
   text-align: left;
   font-family: 'Arial', sans-serif;
@@ -38,7 +48,8 @@
 
 .hero-section button {
   position: relative;
-  z-index: 1; /* button queda encima de la imagen */
+  z-index: 1;
+  /* button queda encima de la imagen */
   background-color: var(--peach);
   color: #333;
   border: none;
@@ -53,3 +64,242 @@ button:hover {
   background-color: var(--sand);
 }
 
+/* Estilos para la barra de navegación */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--orange);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 18px;
+  transition: 0.3s;
+  /*transicion para el hover*/
+}
+
+.nav-links a:hover {
+  color: var(--peach) !important;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  background-color: var(--orange) !important;
+  /* Muestra el ícono de hamburguesa en dispositivos móviles */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffff !important;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+footer {
+  background-color: var(--orange) !important;
+  color: #ffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: var(--orange) !important;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--orange) !important;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  color: #ffff;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--peach) !important;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  background-color: var(--orange) !important;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  /* permite que los clics pasen a través del banner */
+
+  background-color: var(--peach) !important;
+  color: white !important;
+}
+
+.cookie-content {
+  pointer-events: auto;
+  /* permite que los clics interactúen con el contenido del banner */
+  width: min(1100px, 100%);
+  /* limita el ancho del contenido a 1100px o al 100% del ancho de la pantalla, lo que sea menor */
+  background-color: var(--peach) !important;
+  color: black !important;
+  border: 1px solid var(--peach);
+  border-radius: 15px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.cookie-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  /* aumenta el espacio entre líneas para mejorar la legibilidad */
+  color: #333 !important;
+}
+
+.cookie-link{
+   text-decoration: underline;
+   color: var(--orange) !important;
+   margin-left: 6px;
+}
+ .cookie-actions{
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0; /* evita que los botones se reduzcan de tamaño cuando el espacio es limitado */
+    background-color: var(--peach) !important;
+ }
+
+ .cookie-btn{
+  border:0;
+  border-radius:10px;
+  padding:10px 14px;
+  font-size:14px;
+  cursor:pointer;
+  transition:transform .06s ease, opacity .2s ease;
+}
+
+.cookie-btn:active{
+    transform:scale(.95);
+}
+
+.cookie-btn--primary{
+  background:var(--orange);
+  color:#111;
+}
+
+.cookie-btn--ghost{
+  background:transparent;
+  color:#333;
+  border:1px solid #3a3a3a;
+  opacity:.9;
+}
+
+.cookie-btn--ghost:hover{
+  opacity:1;
+}
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    height: calc(100vh - 70px);
+    padding-top: 20px;
+    transform: translateX(100%);
+    /* ← Solo aquí va el transform */
+    transition: 0.3s;
+  }
+
+
+  .nav-links.active {
+    transform: translateX(0);
+    align-items: center;
+  }
+
+
+  .hamburger {
+    display: flex;
+    background: #F4A261 !important;
+    /* Muestra el ícono de hamburguesa en dispositivos móviles */
+  }
+}
+
+/* Estilos para el banner de cookies en dispositivos móviles */
+@media (max-width:768px){
+  .cookie-content{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .cookie-actions{
+    width:100%;
+  }
+
+  .cookie-btn{
+    width:100%;
+  }
+}
