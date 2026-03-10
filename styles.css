@@ -52,7 +52,8 @@ header {
   /* button queda encima de la imagen */
   background-color: var(--peach);
   color: #333;
-  border: none;
+  font-weight: 600;
+  border: solid var(--orange) 2px;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 1rem;
@@ -64,8 +65,7 @@ button:hover {
   background-color: var(--sand);
 }
 
-/* Estilos para la barra de navegación */
-
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -84,9 +84,7 @@ button:hover {
   display: flex;
   list-style: none;
   gap: 30px;
-
 }
-
 
 .nav-links a {
   text-decoration: none;
@@ -99,7 +97,6 @@ button:hover {
 .nav-links a:hover {
   color: var(--peach) !important;
 }
-
 
 .hamburger {
   display: none;
@@ -118,6 +115,33 @@ button:hover {
   transition: 0.3s;
 }
 
+/* SERVICIOS */
+.services-section {
+  background-color: var(--cream);
+  padding: 40px 20px;
+}
+
+ /*uso de flexbox*/
+.services-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card {
+  background-color: var(--sand);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sage);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* FOOTER */
 footer {
   background-color: var(--orange) !important;
   color: #ffff;
@@ -217,45 +241,47 @@ footer {
   color: #333 !important;
 }
 
-.cookie-link{
-   text-decoration: underline;
-   color: var(--orange) !important;
-   margin-left: 6px;
-}
- .cookie-actions{
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0; /* evita que los botones se reduzcan de tamaño cuando el espacio es limitado */
-    background-color: var(--peach) !important;
- }
-
- .cookie-btn{
-  border:0;
-  border-radius:10px;
-  padding:10px 14px;
-  font-size:14px;
-  cursor:pointer;
-  transition:transform .06s ease, opacity .2s ease;
+.cookie-link {
+  text-decoration: underline;
+  color: var(--orange) !important;
+  margin-left: 6px;
 }
 
-.cookie-btn:active{
-    transform:scale(.95);
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  /* evita que los botones se reduzcan de tamaño cuando el espacio es limitado */
+  background-color: var(--peach) !important;
 }
 
-.cookie-btn--primary{
-  background:var(--orange);
-  color:#111;
+.cookie-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .06s ease, opacity .2s ease;
 }
 
-.cookie-btn--ghost{
-  background:transparent;
-  color:#333;
-  border:1px solid #3a3a3a;
-  opacity:.9;
+.cookie-btn:active {
+  transform: scale(.95);
 }
 
-.cookie-btn--ghost:hover{
-  opacity:1;
+.cookie-btn--primary {
+  background: var(--orange);
+  color: #111;
+}
+
+.cookie-btn--ghost {
+  background: transparent;
+  color: #333;
+  border: 1px solid #3a3a3a;
+  opacity: .9;
+}
+
+.cookie-btn--ghost:hover {
+  opacity: 1;
 }
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
@@ -289,17 +315,17 @@ footer {
 }
 
 /* Estilos para el banner de cookies en dispositivos móviles */
-@media (max-width:768px){
-  .cookie-content{
-    flex-direction:column;
-    align-items:stretch;
+@media (max-width:768px) {
+  .cookie-content {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .cookie-actions{
-    width:100%;
+  .cookie-actions {
+    width: 100%;
   }
 
-  .cookie-btn{
-    width:100%;
+  .cookie-btn {
+    width: 100%;
   }
 }
