@@ -20,9 +20,13 @@ header {
 }
 
 .hero-section {
+  display: flex;
   position: relative;
   min-height: 50vh;
   padding-left: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image {
@@ -46,7 +50,7 @@ header {
   padding-top: 20px;
 }
 
-.hero-section button {
+.btn-hero {
   position: relative;
   z-index: 1;
   /* button queda encima de la imagen */
@@ -61,7 +65,7 @@ header {
   margin-top: 20px;
 }
 
-button:hover {
+.btn-hero:hover {
   background-color: var(--orange);
 }
 
