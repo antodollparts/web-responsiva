@@ -41,7 +41,7 @@ header {
   /* h1 queda encima de la imagen */
   color: #333;
   font-size: 2rem;
-  text-align: left;
+  text-align: center;
   font-family: 'Arial', sans-serif;
   padding-top: 20px;
 }
@@ -51,10 +51,10 @@ header {
   z-index: 1;
   /* button queda encima de la imagen */
   background-color: var(--peach);
+  border-radius: 10px;
+  border: none;
   color: #333;
   font-weight: 600;
-  border: solid var(--orange) 2px;
-  border-radius: 10px;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -62,7 +62,7 @@ header {
 }
 
 button:hover {
-  background-color: var(--sand);
+  background-color: var(--orange);
 }
 
 /* NAVBAR */
@@ -125,10 +125,16 @@ button:hover {
 .services-container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
   padding: 40px 20px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.services-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .service-card {
@@ -140,6 +146,61 @@ button:hover {
   max-width: 300px;
   text-align: center;
 }
+
+/* CONTACTO */
+.contact-section {
+  background-color: var(--sand);
+  padding: 40px 20px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ resize: vertical;
+}
+
+.contact-form input,
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: var(--peach);
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--orange);
+}
+
 
 /* FOOTER */
 footer {
@@ -200,6 +261,7 @@ footer {
   font-size: 14px;
 }
 
+/* BANNER DE COOKIES */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -243,7 +305,7 @@ footer {
 
 .cookie-link {
   text-decoration: underline;
-  color: var(--orange) !important;
+  color: #676363!important;
   margin-left: 6px;
 }
 
@@ -273,6 +335,11 @@ footer {
   color: #111;
 }
 
+.cookie-btn--primary:hover {
+  background-color: var(--sand) !important;
+  opacity: .9;
+}
+
 .cookie-btn--ghost {
   background: transparent;
   color: #333;
@@ -282,6 +349,7 @@ footer {
 
 .cookie-btn--ghost:hover {
   opacity: 1;
+  background-color: #AAB3AB;
 }
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
@@ -296,7 +364,7 @@ footer {
     height: calc(100vh - 70px);
     padding-top: 20px;
     transform: translateX(100%);
-    /* ← Solo aquí va el transform */
+    /*  Solo aquí va el transform */
     transition: 0.3s;
   }
 
@@ -305,7 +373,6 @@ footer {
     transform: translateX(0);
     align-items: center;
   }
-
 
   .hamburger {
     display: flex;
